@@ -20,3 +20,6 @@ Added detail about feature 6 to ensure clarity for users.
 
 ### Section 7
 Added detail about feature 7 to ensure clarity for users.
+
+### Section 8
+Added detail about feature 8 to ensure clarity for users.
