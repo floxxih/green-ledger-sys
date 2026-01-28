@@ -1,30 +1,36 @@
+# green-ledger-sys
 
-## Installation
-Run `npm install`.
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-orange)
 
-### Section 1
-Added detail about feature 1 to ensure clarity for users.
+## Overview
 
-### Section 2
-Added detail about feature 2 to ensure clarity for users.
+Green Ledger Sys is an eco-conscious blockchain ledger solution optimized for minimal energy consumption. It provides transparent, immutable record-keeping for sustainable supply chains.
 
-### Section 3
-Added detail about feature 3 to ensure clarity for users.
+## Key Features
 
-### Section 4
-Added detail about feature 4 to ensure clarity for users.
+- **Eco-Friendly Consensus**: Low-energy validation protocols.\n- **Transparency**: Immutable audit trails for supply chain data.\n- **High Performance**: Optimized for high transaction throughput.\n- **Smart Contracts**: Automated compliance verification.
 
-### Section 5
-Added detail about feature 5 to ensure clarity for users.
+## Getting Started
 
-### Section 6
-Added detail about feature 6 to ensure clarity for users.
+### Prerequisites
 
-### Section 7
-Added detail about feature 7 to ensure clarity for users.
+- Node.js v18+
+- npm v9+
 
-### Section 8
-Added detail about feature 8 to ensure clarity for users.
+### Installation
 
-### Section 9
-Added detail about feature 9 to ensure clarity for users.
+```bash
+git clone https://github.com/harobedjosh-alt/green-ledger-sys.git
+cd green-ledger-sys
+npm install
+```
+
+## Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
