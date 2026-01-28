@@ -11,3 +11,6 @@ Added detail about feature 3 to ensure clarity for users.
 
 ### Section 4
 Added detail about feature 4 to ensure clarity for users.
+
+### Section 5
+Added detail about feature 5 to ensure clarity for users.
