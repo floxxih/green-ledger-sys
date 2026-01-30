@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Mint Page
  * NFT minting interface with wallet balance display and feature highlights

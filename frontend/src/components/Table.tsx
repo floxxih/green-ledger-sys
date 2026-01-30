@@ -37,7 +37,7 @@ interface TableProps<T> {
   className?: string;
 }
 
-function TableComponent<T extends Record<string, unknown>>({
+function TableComponent<T>({
   data,
   columns,
   keyExtractor,
@@ -224,7 +224,7 @@ interface DataTableProps<T> extends Omit<TableProps<T>, 'data'> {
   totalItems?: number;
 }
 
-export function DataTable<T extends Record<string, unknown>>({
+export function DataTable<T>({
   data,
   pageSize = 10,
   currentPage = 1,

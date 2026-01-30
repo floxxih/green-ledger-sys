@@ -252,7 +252,7 @@ export async function callContract(
       ...options,
       network: getNetwork(),
       appDetails,
-      onFinish: (data) => {
+      onFinish: (data: any) => {
         callbacks?.onFinish?.(data);
         resolve();
       },
@@ -260,7 +260,7 @@ export async function callContract(
         callbacks?.onCancel?.();
         reject(new Error('Transaction cancelled'));
       },
-    });
+    } as any);
   });
 }
 

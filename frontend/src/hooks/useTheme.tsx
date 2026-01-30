@@ -225,7 +225,7 @@ interface ThemeContextType {
   toggleMode: () => void;
 }
 
-const ThemeContext = createContext<ThemeContextType | null>(null);
+const ThemeCtx = createContext<ThemeContextType | null>(null);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const { settings, updateSettings, resetSettings, isLoaded } = useThemeSettings();
@@ -247,14 +247,14 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeCtx.Provider value={value}>
       {children}
-    </ThemeContext.Provider>
+    </ThemeCtx.Provider>
   );
 }
 
 export function useTheme(): ThemeContextType {
-  const context = useContext(ThemeContext);
+  const context = useContext(ThemeCtx);
   if (!context) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
