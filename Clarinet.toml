@@ -1,0 +1,35 @@
+[project]
+name = "stacksmint"
+description = "Decentralized NFT Marketplace on Stacks"
+authors = []
+telemetry = true
+cache_dir = "./.clarinet/cache"
+requirements = []
+
+[contracts.sip009-nft-trait]
+path = "contracts/sip009-nft-trait.clar"
+clarity_version = 2
+epoch = 2.5
+
+[contracts.stacksmint-treasury-v2-1]
+path = "contracts/stacksmint-treasury-v2-1.clar"
+clarity_version = 2
+epoch = 2.5
+
+[contracts.stacksmint-collection-v2-1-3]
+path = "contracts/stacksmint-collection-v2-1-3.clar"
+clarity_version = 2
+epoch = 2.5
+depends_on = ["stacksmint-treasury-v2-1"]
+
+[contracts.stacksmint-nft-v2-1-3]
+path = "contracts/stacksmint-nft-v2-1-3.clar"
+clarity_version = 2
+epoch = 2.5
+depends_on = ["sip009-nft-trait", "stacksmint-treasury-v2-1"]
+
+[contracts.stacksmint-marketplace-v2-1-3]
+path = "contracts/stacksmint-marketplace-v2-1-3.clar"
+clarity_version = 2
+epoch = 2.5
+depends_on = ["stacksmint-nft-v2-1-3", "stacksmint-treasury-v2-1"]

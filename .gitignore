@@ -1,5 +1,5 @@
 # Deployment
-Clarinet.toml
+# Clarinet.toml
 testnet.toml
 devnet.toml
 
@@ -38,3 +38,4 @@ settings/
 
 # Personal tools
 scripts/
+.vercel

@@ -9,7 +9,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { useWallet } from '@/hooks/useWallet';
-import { fetchTransactions } from '@/lib/api';
+import { api } from '@/lib/api';
 
 // Display configuration
 const MAX_TRANSACTIONS_DISPLAY = 10;
@@ -72,7 +72,7 @@ export default function TransactionHistory() {
   useEffect(() => {
     if (address) {
       setLoading(true);
-      fetchTransactions(address).then((data) => {
+      api.getAccountTransactions(address).then((data) => {
         setTransactions(data.results?.slice(0, 10) || []);
         setLoading(false);
       });

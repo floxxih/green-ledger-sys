@@ -48,7 +48,7 @@ function useRadioContext<T>() {
   if (!context) {
     throw new Error('Radio components must be used within RadioGroup');
   }
-  return context as RadioContextType<T>;
+  return context as unknown as RadioContextType<T>;
 }
 
 // Size configurations
@@ -94,7 +94,7 @@ export function RadioGroup<T extends string>({
   const config = sizeConfig[size];
 
   return (
-    <RadioContext.Provider value={{ name, value, onChange, variant, size } as RadioContextType}>
+    <RadioContext.Provider value={{ name, value, onChange, variant, size } as unknown as RadioContextType}>
       <fieldset className={className}>
         {label && (
           <legend className="text-white font-medium mb-3">{label}</legend>

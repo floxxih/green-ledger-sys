@@ -40,7 +40,7 @@ export default function WalletBalance() {
     try {
       setIsRefreshing(true);
       const data = await fetchSTXBalance(address);
-      const stx = parseInt(data.balance) / 1000000;
+      const stx = data.balance / 1000000;
       setBalance(stx.toFixed(4));
       setLastUpdated(new Date());
     } catch (error) {

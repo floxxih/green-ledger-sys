@@ -287,6 +287,8 @@ export function WalletProvider({ children }: { children: ReactNode }) {
     error: state.error,
     shortAddress,
     explorerUrl,
+    isMainnet: state.network === 'mainnet',
+    isTestnet: state.network === 'testnet',
     connect,
     connectWalletConnect,
     disconnect,

@@ -75,11 +75,11 @@ export default function FilterTabs({
       <div className="relative">
         <div className="flex gap-6 border-b border-gray-700/50">
           {normalizedTabs.map((tab, index) => (
-            <button
-              key={tab.id}
-              ref={el => tabRefs.current[index] = el}
-              onClick={() => handleSelect(tab.id)}
-              className={`pb-3 text-sm font-medium transition-colors relative ${
+              <button
+                key={tab.id}
+                ref={el => { tabRefs.current[index] = el; }}
+                onClick={() => handleSelect(tab.id)}
+                className={`pb-3 text-sm font-medium transition-colors relative ${
                 active === tab.id 
                   ? 'text-purple-400' 
                   : 'text-gray-400 hover:text-white'
