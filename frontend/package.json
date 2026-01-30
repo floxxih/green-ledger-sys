@@ -19,6 +19,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "clean": "rm -rf .next node_modules"
   },
   "dependencies": {
