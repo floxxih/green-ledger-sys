@@ -24,7 +24,13 @@
     "build": "cd frontend && npm run build",
     "start": "cd frontend && npm run start",
     "lint": "cd frontend && npm run lint",
-    "test": "clarinet test",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "check": "clarinet check"
+  },
+  "devDependencies": {
+    "@hirosystems/clarinet-sdk": "^2.4.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
   }
 }
