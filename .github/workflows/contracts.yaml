@@ -1,0 +1,32 @@
+name: Contracts CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  clarinet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Clarinet
+        uses: hirosystems/setup-clarinet@v1
+        with:
+          clarinet-version: '2.4.0'
+
+      - name: Check Contracts
+        run: clarinet check
+
+      - name: Install Test Dependencies
+        run: npm ci
+
+      - name: Run Tests
+        run: npm test
