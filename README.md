@@ -1,36 +1,62 @@
-# green-ledger-sys
+# StackMint - Decentralized NFT Marketplace on Stacks
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Version](https://img.shields.io/badge/version-1.0.0-orange)
-
-## Overview
-
-Green Ledger Sys is an eco-conscious blockchain ledger solution optimized for minimal energy consumption. It provides transparent, immutable record-keeping for sustainable supply chains.
+StackMint is a premier NFT marketplace and auction platform built on the Stacks blockchain, leveraging Clarity smart contracts for secure, transparent, and efficient digital asset trading.
 
 ## Key Features
 
-- **Eco-Friendly Consensus**: Low-energy validation protocols.\n- **Transparency**: Immutable audit trails for supply chain data.\n- **High Performance**: Optimized for high transaction throughput.\n- **Smart Contracts**: Automated compliance verification.
+- **NFT Minting**: Create and deploy SIP-009 compliant NFTs with customizable metadata.
+- **Marketplace**: List NFTs for sale with fixed prices or open offers.
+- **Auctions**: Create time-bound auctions with reserve prices and extended bidding periods.
+- **Bundles**: Sell multiple NFTs as a single package.
+- **Escrow System**: Secure fund management ensuring safe transactions between buyers and sellers.
+- **Royalty Support**: Built-in royalty enforcement for creators on secondary sales.
+
+## Project Structure
+
+- `contracts/`: Clarity smart contracts (SIP-009 NFT, Marketplace, Treasury).
+- `frontend/`: Next.js 14 frontend application.
+- `tests/`: Clarinet test suite (in progress).
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js v18+
-- npm v9+
+- [Clarinet](https://github.com/hirosystems/clarinet) (for contract development)
+- Node.js v18+ & npm/yarn
 
 ### Installation
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/stacksmint/stacksmint.git
+   cd stacksmint
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   cd frontend && npm install
+   ```
+
+### Development
+
+To run the local Stacks devnet and test contracts:
+
 ```bash
-git clone https://github.com/harobedjosh-alt/green-ledger-sys.git
-cd green-ledger-sys
-npm install
+clarinet integrate
+```
+
+To start the frontend:
+
+```bash
+cd frontend
+npm run dev
 ```
 
 ## Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+Please check `CONTRIBUTING.md` for details on how to contribute to this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT
