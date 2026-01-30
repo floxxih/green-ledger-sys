@@ -1,4 +1,5 @@
 import { CONTRACTS } from '../lib/constants';
+import { MOCK_COLLECTIONS } from '../lib/mocks/collections';
 
 export interface Collection {
   id: number;
@@ -13,24 +14,14 @@ export interface Collection {
 
 export const CollectionService = {
   getCollections: async (): Promise<Collection[]> => {
-    // Mock implementation for now, replacing actual API call
-    return [
-      {
-        id: 1,
-        name: "Genesis Punks",
-        description: "The first collection on StackMint",
-        logo: "https://placehold.co/100",
-        banner: "https://placehold.co/600x200",
-        floorPrice: 100,
-        volume: 50000,
-        owner: "SP123...",
-      }
-    ];
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 500));
+    return MOCK_COLLECTIONS;
   },
 
   getCollectionById: async (id: number): Promise<Collection | null> => {
-    const collections = await CollectionService.getCollections();
-    return collections.find(c => c.id === id) || null;
+    await new Promise(resolve => setTimeout(resolve, 300));
+    return MOCK_COLLECTIONS.find(c => c.id === id) || null;
   },
 
   createCollection: async (data: Partial<Collection>) => {
