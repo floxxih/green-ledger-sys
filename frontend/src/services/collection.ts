@@ -24,6 +24,18 @@ export const CollectionService = {
     return MOCK_COLLECTIONS.find(c => c.id === id) || null;
   },
 
+  getCollectionStats: async (id: number) => {
+    // Mock stats
+    await new Promise(resolve => setTimeout(resolve, 300));
+    return {
+      items: 10000,
+      owners: 2500,
+      floorPrice: 100,
+      volume: 50000,
+      listed: 120
+    };
+  },
+
   createCollection: async (data: Partial<Collection>) => {
     // Contract call preparation logic would go here
     console.log("Preparing to create collection:", data);
