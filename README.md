@@ -53,6 +53,14 @@ cd frontend
 npm run dev
 ```
 
+## Troubleshooting
+
+### Common Installation Issues
+
+- **Clarinet not found**: Ensure Clarinet is installed and added to your PATH
+- **Node version mismatch**: Use Node.js v18 or higher (check with `node --version`)
+- **Port conflicts**: If port 3000 is in use, set a custom port with `PORT=3001 npm run dev`
+
 ## Contributing
 
 Please check `CONTRIBUTING.md` for details on how to contribute to this project.
