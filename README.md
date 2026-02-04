@@ -2,6 +2,10 @@
 
 StackMint is a premier NFT marketplace and auction platform built on the Stacks blockchain, leveraging Clarity smart contracts for secure, transparent, and efficient digital asset trading.
 
+## Why StackMint?
+
+StackMint provides a fully decentralized NFT marketplace experience powered by Bitcoin's security through the Stacks blockchain. Our platform emphasizes creator rights, fair pricing mechanisms, and transparent transactions without intermediaries.
+
 ## Key Features
 
 - **NFT Minting**: Create and deploy SIP-009 compliant NFTs with customizable metadata.
