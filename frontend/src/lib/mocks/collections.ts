@@ -4,7 +4,7 @@ export const MOCK_COLLECTIONS: Collection[] = [
   {
     id: 1,
     name: "Genesis Punks",
-    description: "The first collection on StackMint",
+    description: "The first collection on AuroraMint",
     logo: "https://placehold.co/100",
     banner: "https://placehold.co/600x200",
     floorPrice: 100,

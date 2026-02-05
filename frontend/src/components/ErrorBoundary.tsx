@@ -155,7 +155,7 @@ function DefaultErrorUI({ error, errorInfo, onReset, showDetails }: DefaultError
         <p className="mt-6 text-sm text-gray-500">
           If this problem persists,{' '}
           <a 
-            href="mailto:support@stacksmint.io" 
+            href="mailto:support@auroramint.io" 
             className="text-orange-400 hover:text-orange-300 transition-colors"
           >
             contact support

@@ -1,5 +1,5 @@
 /**
- * StacksMint UI Utilities
+ * AuroraMint UI Utilities
  * Common helper functions for UI components
  * @module lib/ui-utils
  * @version 1.0.0

@@ -3,7 +3,7 @@ import { Cl } from "@hirosystems/clarinet-sdk";
 import { StacksmintNft } from "./wrappers/nft";
 import { StacksmintMarketplace } from "./wrappers/marketplace";
 
-describe("StackMint Marketplace - Bundles", () => {
+describe("AuroraMint Marketplace - Bundles", () => {
   const accounts = simnet.getAccounts();
   const owner = accounts.get("wallet_1")!;
   const buyer = accounts.get("wallet_2")!;

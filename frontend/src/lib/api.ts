@@ -1,5 +1,5 @@
 /**
- * StacksMint API Client
+ * AuroraMint API Client
  * Handles all API interactions with backend and blockchain
  * @module api
  * @version 1.0.0

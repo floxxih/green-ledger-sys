@@ -187,7 +187,7 @@ export default function MintPage() {
           {/* Features Grid */}
           <div className="mt-20">
             <h2 className="text-2xl font-bold text-white text-center mb-8">
-              Why Mint on <span className="text-purple-400">StacksMint</span>?
+              Why Mint on <span className="text-purple-400">AuroraMint</span>?
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {features.map((feature, index) => (

@@ -1,6 +1,6 @@
-# StackMint Frontend
+# AuroraMint Frontend
 
-The official frontend for the StackMint NFT Marketplace.
+The official frontend for the AuroraMint NFT marketplace.
 
 ## Getting Started
 

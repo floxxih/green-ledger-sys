@@ -47,7 +47,7 @@ const fontSizes: Record<ThemeSettings['fontSize'], string> = {
 };
 
 // Storage key
-const STORAGE_KEY = 'stacksmint-theme-settings';
+const STORAGE_KEY = 'auroramint-theme-settings';
 
 /**
  * Hook for basic theme mode

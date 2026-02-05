@@ -10,7 +10,7 @@
 import { useState, useCallback, useEffect } from 'react';
 
 /** Storage key for favorites */
-const STORAGE_KEY = 'stacksmint-favorites';
+const STORAGE_KEY = 'auroramint-favorites';
 
 interface FavoriteItem {
   id: string;

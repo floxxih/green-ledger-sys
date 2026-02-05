@@ -1,13 +1,13 @@
 {
-  "name": "stacksmint",
+  "name": "aurora-mint",
   "version": "2.2.0",
-  "description": "Decentralized NFT Marketplace and Auction Platform on Stacks",
-  "author": "StacksMint Team",
+  "description": "Decentralized NFT marketplace and auction platform on Stacks",
+  "author": "AuroraMint Team",
   "license": "MIT",
-  "homepage": "https://stacksmint.io",
+  "homepage": "https://auroramint.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stacksmint/stacksmint"
+    "url": "https://github.com/floxxih/green-ledger-sys"
   },
   "keywords": [
     "nft",

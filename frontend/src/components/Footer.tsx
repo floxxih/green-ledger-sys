@@ -33,8 +33,8 @@ interface SocialLink {
 
 // Company information
 const COMPANY_INFO = {
-  name: 'StacksMint',
-  tagline: 'NFT Minting on Bitcoin',
+  name: 'AuroraMint',
+  tagline: 'NFT Markets Secured by Bitcoin',
   startYear: 2024,
 } as const;
 
@@ -119,7 +119,7 @@ export default function Footer() {
     },
     { 
       label: 'GitHub', 
-      href: 'https://github.com/AdekunleBamz/StackMint',
+      href: 'https://github.com/auroramint',
       hoverColor: 'hover:bg-gray-600',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -154,10 +154,10 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-flex items-center gap-2.5 mb-4 group">
               <span className="text-3xl group-hover:scale-110 transition-transform duration-300">💎</span>
-              <span className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">StacksMint</span>
+              <span className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">AuroraMint</span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
-              The premier NFT minting platform on Stacks. Create, collect, and trade digital assets secured by Bitcoin.
+              The premier NFT marketplace on Stacks. Create, collect, and trade digital assets secured by Bitcoin.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
@@ -245,7 +245,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2 text-gray-500 text-sm">
-            <span>© {copyrightYears} StacksMint.</span>
+            <span>© {copyrightYears} AuroraMint.</span>
             <span className="hidden sm:inline">All rights reserved.</span>
             <span className="hidden sm:inline text-gray-700">•</span>
             <span className="hidden sm:flex items-center gap-1">

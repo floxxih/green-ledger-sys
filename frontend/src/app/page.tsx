@@ -12,7 +12,7 @@ import Footer from '@/components/Footer';
 
 /**
  * Home Page
- * Main landing page for StacksMint platform
+ * Main landing page for AuroraMint platform
  * @module pages/Home
  * @version 2.1.0
  */

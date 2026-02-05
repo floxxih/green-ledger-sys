@@ -1,4 +1,4 @@
-# StackMint Roadmap
+# AuroraMint Roadmap
 
 ## Phase 1: Core Infrastructure
 - [x] Define Project Identity (README, package.json)

@@ -77,7 +77,7 @@ export default function ShareModal({
   title,
   url,
   image,
-  description = 'Check out this amazing NFT on StacksMint!',
+  description = 'Check out this amazing NFT on AuroraMint!',
 }: ShareModalProps) {
   const [copied, setCopied] = useState(false);
   const [embedCopied, setEmbedCopied] = useState(false);

@@ -1,5 +1,5 @@
 /**
- * StacksMint Design System Types
+ * AuroraMint Design System Types
  * Shared type definitions for UI components
  * @module types/design-system
  * @version 1.0.0

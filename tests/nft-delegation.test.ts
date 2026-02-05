@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { Cl } from "@hirosystems/clarinet-sdk";
 import { StacksmintNft } from "./wrappers/nft";
 
-describe("StackMint NFT - Delegation & Approvals", () => {
+describe("AuroraMint NFT - Delegation & Approvals", () => {
   const accounts = simnet.getAccounts();
   const owner = accounts.get("wallet_1")!;
   const delegate = accounts.get("wallet_2")!;

@@ -10,7 +10,7 @@
 import { useState, useCallback, useEffect, useMemo } from 'react';
 
 /** Search history storage key */
-const HISTORY_STORAGE_KEY = 'stacksmint-search-history';
+const HISTORY_STORAGE_KEY = 'auroramint-search-history';
 
 /** Maximum history items to store */
 const MAX_HISTORY = 10;

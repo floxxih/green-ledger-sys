@@ -145,11 +145,11 @@ export default function Header() {
           <Link 
             href="/" 
             className="flex items-center gap-2.5 group"
-            aria-label="StacksMint Home"
+            aria-label="AuroraMint Home"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform duration-300">💎</span>
             <span className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
-              StacksMint
+              AuroraMint
             </span>
           </Link>
 

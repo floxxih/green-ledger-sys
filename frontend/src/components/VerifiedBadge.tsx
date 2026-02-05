@@ -29,7 +29,7 @@ const badgeConfig: Record<VerificationType, {
   verified: {
     icon: '✓',
     label: 'Verified',
-    description: 'This account or collection has been verified by StacksMint',
+    description: 'This account or collection has been verified by AuroraMint',
     color: 'text-blue-400',
     bgColor: 'bg-blue-500',
     borderColor: 'border-blue-400',
@@ -37,7 +37,7 @@ const badgeConfig: Record<VerificationType, {
   official: {
     icon: '★',
     label: 'Official',
-    description: 'Official StacksMint partner or affiliated project',
+    description: 'Official AuroraMint partner or affiliated project',
     color: 'text-purple-400',
     bgColor: 'bg-purple-500',
     borderColor: 'border-purple-400',
@@ -45,7 +45,7 @@ const badgeConfig: Record<VerificationType, {
   partner: {
     icon: '◆',
     label: 'Partner',
-    description: 'Trusted partner of the StacksMint ecosystem',
+    description: 'Trusted partner of the AuroraMint ecosystem',
     color: 'text-orange-400',
     bgColor: 'bg-orange-500',
     borderColor: 'border-orange-400',

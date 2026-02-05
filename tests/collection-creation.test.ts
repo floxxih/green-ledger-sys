@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { Cl } from "@hirosystems/clarinet-sdk";
 import { StacksmintCollection } from "./wrappers/collection";
 
-describe("StackMint Collection - Creation", () => {
+describe("AuroraMint Collection - Creation", () => {
   const accounts = simnet.getAccounts();
   const creator = accounts.get("wallet_1")!;
 

@@ -1,5 +1,5 @@
 /**
- * StacksMint Application Constants
+ * AuroraMint Application Constants
  * Centralized configuration values used throughout the application
  * @module constants
  * @version 1.0.0
@@ -9,10 +9,10 @@
 // Application Metadata
 // ============================================================================
 
-export const APP_NAME = 'StacksMint';
-export const APP_DESCRIPTION = 'The premier NFT minting platform on Stacks blockchain';
+export const APP_NAME = 'AuroraMint';
+export const APP_DESCRIPTION = 'The premier NFT marketplace on Stacks blockchain';
 export const APP_VERSION = '1.0.0';
-export const APP_URL = 'https://stacksmint.io';
+export const APP_URL = 'https://auroramint.io';
 
 // ============================================================================
 // Network Configuration
@@ -142,10 +142,10 @@ export const IPFS = {
 // ============================================================================
 
 export const SOCIAL_LINKS = {
-  twitter: 'https://twitter.com/stacksmint',
-  discord: 'https://discord.gg/stacksmint',
-  github: 'https://github.com/stacksmint',
-  telegram: 'https://t.me/stacksmint',
+  twitter: 'https://twitter.com/auroramint',
+  discord: 'https://discord.gg/auroramint',
+  github: 'https://github.com/auroramint',
+  telegram: 'https://t.me/auroramint',
 } as const;
 
 // ============================================================================

@@ -1,5 +1,5 @@
 /**
- * StacksMint Utility Functions
+ * AuroraMint Utility Functions
  * Common helper functions used throughout the application
  * @module utils
  * @version 2.1.0
