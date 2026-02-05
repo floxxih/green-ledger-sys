@@ -1,61 +1,68 @@
-# StackMint - Decentralized NFT Marketplace on Stacks
+# AuroraMint
 
-StackMint is a premier NFT marketplace and auction platform built on the Stacks blockchain, leveraging Clarity smart contracts for secure, transparent, and efficient digital asset trading.
+AuroraMint is a decentralized NFT marketplace on Stacks built for creators, collectors, and teams who want flexible minting, transparent trading, and Bitcoin-secured settlement.
 
-## Key Features
+## What AuroraMint Delivers
 
-- **NFT Minting**: Create and deploy SIP-009 compliant NFTs with customizable metadata.
-- **Marketplace**: List NFTs for sale with fixed prices or open offers.
-- **Auctions**: Create time-bound auctions with reserve prices and extended bidding periods.
-- **Bundles**: Sell multiple NFTs as a single package.
-- **Escrow System**: Secure fund management ensuring safe transactions between buyers and sellers.
-- **Royalty Support**: Built-in royalty enforcement for creators on secondary sales.
+- **Creator-first minting** with SIP-009 NFTs, metadata control, and royalties.
+- **Multi-mode trading** including fixed-price listings, offers, and auctions.
+- **Bundle sales** for drops, collections, and multi-asset deals.
+- **Escrow-backed settlement** to keep buyers and sellers protected.
+- **Clear auditability** through Clarity smart contracts and on-chain history.
 
-## Project Structure
+## Repo Layout
 
-- `contracts/`: Clarity smart contracts (SIP-009 NFT, Marketplace, Treasury).
-- `frontend/`: Next.js 14 frontend application.
-- `tests/`: Clarinet test suite (in progress).
+- `contracts/`: Clarity smart contracts for NFTs, marketplace, and treasury.
+- `frontend/`: Next.js frontend experience.
+- `tests/`: Clarinet and Vitest coverage for contracts.
+- `deployments/`: Example deployment plans for mainnet and devnet.
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Clarinet](https://github.com/hirosystems/clarinet) (for contract development)
-- Node.js v18+ & npm/yarn
+- [Clarinet](https://github.com/hirosystems/clarinet)
+- Node.js v18+
 
-### Installation
+### Install
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/stacksmint/stacksmint.git
-   cd stacksmint
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   cd frontend && npm install
-   ```
+```bash
+git clone https://github.com/floxxih/green-ledger-sys.git
+cd green-ledger-sys
+npm install
+cd frontend && npm install
+```
 
 ### Development
 
-To run the local Stacks devnet and test contracts:
+Run the local Stacks devnet and contract suite:
 
 ```bash
 clarinet integrate
 ```
 
-To start the frontend:
+Launch the frontend:
 
 ```bash
 cd frontend
 npm run dev
 ```
 
+## Configuration
+
+- Frontend configuration and contract addresses live in `frontend/src/lib/constants.ts`.
+- Example environment variables are in `frontend/.env.example`.
+
+## Testing
+
+```bash
+clarinet check
+npm test
+```
+
 ## Contributing
 
-Please check `CONTRIBUTING.md` for details on how to contribute to this project.
+Review `CONTRIBUTING.md` for branching, testing, and release workflows.
 
 ## License
 

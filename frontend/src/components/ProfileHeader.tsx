@@ -104,7 +104,7 @@ export function ProfileHeader({
 
   const handleShare = useCallback((platform: string) => {
     const profileUrl = `${window.location.origin}/profile/${profile.address}`;
-    const text = `Check out ${profile.username || truncateAddress(profile.address)} on StacksMint!`;
+    const text = `Check out ${profile.username || truncateAddress(profile.address)} on AuroraMint!`;
     
     const urls: Record<string, string> = {
       twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(profileUrl)}`,

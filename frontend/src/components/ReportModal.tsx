@@ -156,7 +156,7 @@ export default function ReportModal({
             </div>
             <h2 className="text-xl font-bold text-white mb-2">Report Submitted</h2>
             <p className="text-gray-400 mb-6">
-              Thank you for helping keep StacksMint safe. We&apos;ll review your report and take appropriate action.
+              Thank you for helping keep AuroraMint safe. We&apos;ll review your report and take appropriate action.
             </p>
             <button
               onClick={onClose}

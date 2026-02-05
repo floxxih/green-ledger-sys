@@ -302,7 +302,7 @@ export default function ProfilePage() {
                       placeholder="Enter display name"
                       className="w-full bg-gray-900/50 border border-gray-700 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     />
-                    <p className="text-xs text-gray-500">This is how you'll appear on StacksMint</p>
+                    <p className="text-xs text-gray-500">This is how you'll appear on AuroraMint</p>
                   </div>
                   <div className="space-y-2">
                     <label className="block text-sm font-medium text-gray-300">Email Address</label>

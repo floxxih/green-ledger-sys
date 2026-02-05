@@ -39,7 +39,7 @@ interface ThemeProviderProps {
 export function ThemeProvider({
   children,
   defaultTheme = 'system',
-  storageKey = 'stacksmint-theme',
+  storageKey = 'auroramint-theme',
 }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(defaultTheme);
   const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>('dark');

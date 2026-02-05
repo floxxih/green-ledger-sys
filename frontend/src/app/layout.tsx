@@ -15,7 +15,7 @@ import { ToastProvider } from '@/context/ToastContext';
 const APP_VERSION = '1.0.0';
 
 /** Application name for metadata */
-const APP_NAME = 'StacksMint';
+const APP_NAME = 'AuroraMint';
 
 /** Default locale for internationalization */
 const DEFAULT_LOCALE = 'en-US';
@@ -45,10 +45,10 @@ const spaceGrotesk = Space_Grotesk({
 // Enhanced metadata with comprehensive SEO
 export const metadata: Metadata = {
   title: {
-    default: 'StacksMint - NFT Minting Platform on Bitcoin',
-    template: '%s | StacksMint',
+    default: 'AuroraMint - NFT Marketplace on Bitcoin',
+    template: '%s | AuroraMint',
   },
-  description: 'The premier NFT minting platform on Stacks blockchain. Create, collect, and trade unique digital assets secured by Bitcoin.',
+  description: 'The premier NFT marketplace on Stacks blockchain. Create, collect, and trade unique digital assets secured by Bitcoin.',
   keywords: [
     'NFT',
     'Stacks',
@@ -63,40 +63,40 @@ export const metadata: Metadata = {
     'Smart Contracts',
     'Clarity',
   ],
-  authors: [{ name: 'StacksMint Team' }],
-  creator: 'StacksMint',
-  publisher: 'StacksMint',
+  authors: [{ name: 'AuroraMint Team' }],
+  creator: 'AuroraMint',
+  publisher: 'AuroraMint',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://stacksmint.io'),
+  metadataBase: new URL('https://auroramint.io'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://stacksmint.io',
-    siteName: 'StacksMint',
-    title: 'StacksMint - NFT Minting Platform on Bitcoin',
-    description: 'The premier NFT minting platform on Stacks blockchain. Create, collect, and trade unique digital assets secured by Bitcoin.',
+    url: 'https://auroramint.io',
+    siteName: 'AuroraMint',
+    title: 'AuroraMint - NFT Marketplace on Bitcoin',
+    description: 'The premier NFT marketplace on Stacks blockchain. Create, collect, and trade unique digital assets secured by Bitcoin.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'StacksMint - NFT Platform',
+        alt: 'AuroraMint - NFT Platform',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'StacksMint - NFT Minting Platform on Bitcoin',
-    description: 'The premier NFT minting platform on Stacks blockchain. Create, collect, and trade unique digital assets secured by Bitcoin.',
+    title: 'AuroraMint - NFT Marketplace on Bitcoin',
+    description: 'The premier NFT marketplace on Stacks blockchain. Create, collect, and trade unique digital assets secured by Bitcoin.',
     images: ['/twitter-image.png'],
-    creator: '@stacksmint',
+    creator: '@auroramint',
   },
   robots: {
     index: true,
@@ -143,9 +143,9 @@ function JsonLd() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: 'StacksMint',
-    url: 'https://stacksmint.io',
-    description: 'The premier NFT minting platform on Stacks blockchain',
+    name: 'AuroraMint',
+    url: 'https://auroramint.io',
+    description: 'The premier NFT marketplace on Stacks blockchain',
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Web',
     offers: {
@@ -155,8 +155,8 @@ function JsonLd() {
     },
     author: {
       '@type': 'Organization',
-      name: 'StacksMint',
-      url: 'https://stacksmint.io',
+      name: 'AuroraMint',
+      url: 'https://auroramint.io',
     },
   };
 
@@ -185,7 +185,7 @@ function NetworkStatus() {
   return (
     <noscript>
       <div className="fixed top-0 left-0 right-0 z-50 bg-yellow-500 text-black text-center py-2 text-sm font-medium">
-        JavaScript is required for StacksMint to function properly.
+        JavaScript is required for AuroraMint to function properly.
       </div>
     </noscript>
   );
@@ -208,10 +208,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://api.mainnet.hiro.so" />
         <link rel="dns-prefetch" href="https://api.hiro.so" />
         <link rel="dns-prefetch" href="https://api.mainnet.hiro.so" />
-        <meta name="application-name" content="StacksMint" />
+        <meta name="application-name" content="AuroraMint" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="StacksMint" />
+        <meta name="apple-mobile-web-app-title" content="AuroraMint" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content="#f97316" />
         <meta name="msapplication-tap-highlight" content="no" />

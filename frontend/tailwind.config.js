@@ -1,6 +1,6 @@
 /**
  * Tailwind CSS Configuration
- * Custom theme for StacksMint NFT platform
+ * Custom theme for AuroraMint NFT platform
  * @type {import('tailwindcss').Config}
  * @version 3.0.0
  */

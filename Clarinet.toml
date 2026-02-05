@@ -1,6 +1,6 @@
 [project]
-name = "stacksmint"
-description = "Decentralized NFT Marketplace on Stacks"
+name = "aurora-mint"
+description = "Decentralized NFT marketplace on Stacks"
 authors = []
 telemetry = true
 cache_dir = "./.clarinet/cache"

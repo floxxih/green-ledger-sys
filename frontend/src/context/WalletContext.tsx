@@ -17,7 +17,7 @@ type NetworkType = 'mainnet' | 'testnet' | 'devnet';
 type ConnectionStatus = 'disconnected' | 'connecting' | 'connected' | 'error';
 
 // Storage configuration
-const STORAGE_KEY = 'stacksmint_wallet_preference';
+const STORAGE_KEY = 'auroramint_wallet_preference';
 const CONNECTION_RETRY_DELAY_MS = 1000;
 
 interface WalletState {

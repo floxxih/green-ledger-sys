@@ -46,10 +46,10 @@ export const STACKS_EVENTS = [
 
 // App metadata for WalletConnect
 const metadata = {
-  name: 'StacksMint',
-  description: 'Decentralized NFT minting platform on Stacks blockchain',
-  url: typeof window !== 'undefined' ? window.location.origin : 'https://stacksmint.io',
-  icons: [typeof window !== 'undefined' ? `${window.location.origin}/logo.svg` : 'https://stacksmint.io/logo.svg'],
+  name: 'AuroraMint',
+  description: 'Decentralized NFT marketplace on Stacks blockchain',
+  url: typeof window !== 'undefined' ? window.location.origin : 'https://auroramint.io',
+  icons: [typeof window !== 'undefined' ? `${window.location.origin}/logo.svg` : 'https://auroramint.io/logo.svg'],
 };
 
 // ============================================================================
@@ -563,7 +563,7 @@ export function isWCSessionExpiringSoon(withinMinutes = 30): boolean {
 // Storage Helpers
 // ============================================================================
 
-const STORAGE_KEY = 'stacksmint_wc_connection';
+const STORAGE_KEY = 'auroramint_wc_connection';
 
 interface StoredConnection {
   address: string;

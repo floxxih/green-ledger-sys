@@ -152,7 +152,7 @@ export default function Stats() {
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Platform Statistics</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            Real-time metrics from the StacksMint ecosystem
+            Real-time metrics from the AuroraMint ecosystem
           </p>
         </div>
         

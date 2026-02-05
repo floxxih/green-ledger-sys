@@ -112,7 +112,7 @@ export function useListings(options?: {
           status: 'active' as const,
           listedAt: new Date(Date.now() - Math.random() * 86400000 * 30),
           metadata: {
-            name: `StacksMint NFT #${page * limit + i + 1}`,
+            name: `AuroraMint NFT #${page * limit + i + 1}`,
             image: `/nft-placeholder-${(i % 5) + 1}.png`,
           },
         }));

@@ -1,6 +1,6 @@
 /**
  * Features Component
- * Displays the main features of StacksMint with animations
+ * Displays the main features of AuroraMint with animations
  * @module Features
  * @version 2.3.0
  */
@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from 'react';
 import FeatureCard from './FeatureCard';
 
 // Section configuration
-const SECTION_TITLE = 'Why StacksMint?';
+const SECTION_TITLE = 'Why AuroraMint?';
 const SECTION_SUBTITLE = 'The easiest way to create and trade NFTs on Bitcoin';
 
 /** Grid columns per breakpoint */

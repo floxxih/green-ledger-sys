@@ -30,10 +30,10 @@ const appConfig = new AppConfig([...APP_PERMISSIONS]);
 export const userSession = new UserSession({ appConfig });
 
 export const appDetails = {
-  name: 'StacksMint',
+  name: 'AuroraMint',
   icon: typeof window !== 'undefined' 
     ? `${window.location.origin}/logo.png` 
-    : 'https://stacksmint.io/logo.png',
+    : 'https://auroramint.io/logo.png',
 };
 
 // Network instances
@@ -120,7 +120,7 @@ export function connectWallet(options: WalletConnectionOptions | (() => void) = 
     onFinish: (data) => {
       // Store connection timestamp
       if (typeof window !== 'undefined') {
-        localStorage.setItem('stacksmint_connected_at', Date.now().toString());
+        localStorage.setItem('auroramint_connected_at', Date.now().toString());
       }
       opts.onSuccess?.(data);
     },
@@ -137,8 +137,8 @@ export function disconnectWallet() {
   
   // Clear local storage items
   if (typeof window !== 'undefined') {
-    localStorage.removeItem('stacksmint_connected_at');
-    localStorage.removeItem('stacksmint_last_address');
+    localStorage.removeItem('auroramint_connected_at');
+    localStorage.removeItem('auroramint_last_address');
   }
 }
 
@@ -155,7 +155,7 @@ export function isConnected(): boolean {
 export function isSessionExpired(maxAgeHours = 24): boolean {
   if (typeof window === 'undefined') return false;
   
-  const connectedAt = localStorage.getItem('stacksmint_connected_at');
+  const connectedAt = localStorage.getItem('auroramint_connected_at');
   if (!connectedAt) return false;
   
   const connectedTime = parseInt(connectedAt, 10);
@@ -422,7 +422,7 @@ export function restoreSession(): boolean {
 export function getConnectionDuration(): string | null {
   if (typeof window === 'undefined') return null;
   
-  const connectedAt = localStorage.getItem('stacksmint_connected_at');
+  const connectedAt = localStorage.getItem('auroramint_connected_at');
   if (!connectedAt) return null;
   
   const duration = Date.now() - parseInt(connectedAt, 10);

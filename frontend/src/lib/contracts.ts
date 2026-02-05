@@ -1,5 +1,5 @@
 /**
- * StacksMint Contract Interactions
+ * AuroraMint Contract Interactions
  * Functions for interacting with Clarity smart contracts
  * @module contracts
  * @version 2.0.0
