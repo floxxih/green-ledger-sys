@@ -25,6 +25,8 @@ import {
   cvToHex,
   type TxBroadcastResult,
   callReadOnlyFunction,
+  Pc,
+  FungibleConditionCode,
 } from '@stacks/transactions';
 import { userSession } from './stacks';
 
@@ -256,8 +258,29 @@ export function buildListNFTOptions(params: ListNFTParams, network?: NetworkType
 /**
  * Build transaction options for buying an NFT
  */
-export function buildBuyNFTOptions(params: BuyNFTParams, network?: NetworkType) {
+export function buildBuyNFTOptions(params: BuyNFTParams, network?: NetworkType, buyerAddress?: string) {
   const config = getContractConfig(network);
+
+  // Build post conditions to ensure safe transaction
+  const postConditions = [];
+  
+  if (buyerAddress) {
+    // Ensure buyer sends exactly the purchase price
+    postConditions.push(
+      Pc.principal(buyerAddress)
+        .willSendEq(params.price)
+        .ustx()
+    );
+    
+    // Ensure seller receives payment (minus marketplace fee)
+    // Assuming 2.5% marketplace fee
+    const sellerAmount = Math.floor(params.price * 0.975);
+    postConditions.push(
+      Pc.principal(params.seller)
+        .willReceiveGte(sellerAmount)
+        .ustx()
+    );
+  }
 
   return {
     ...defaultTxOptions,
@@ -268,9 +291,8 @@ export function buildBuyNFTOptions(params: BuyNFTParams, network?: NetworkType) 
       uintCV(params.tokenId),
       principalCV(params.seller),
     ],
-    postConditions: [
-      // Add STX transfer post condition here
-    ],
+    postConditions,
+    postConditionMode: PostConditionMode.Deny, // Strict mode for safety
   };
 }
 

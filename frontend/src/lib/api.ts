@@ -148,6 +148,39 @@ class APIClient {
     return 'pending';
   }
 
+  /**
+   * Wait for transaction confirmation with timeout
+   * @param txId - Transaction ID to monitor
+   * @param maxAttempts - Maximum number of attempts (default: 30)
+   * @param intervalMs - Polling interval in milliseconds (default: 10000)
+   * @returns Transaction info when confirmed or throws on timeout
+   */
+  async waitForTransactionConfirmation(
+    txId: string,
+    maxAttempts: number = 30,
+    intervalMs: number = 10000
+  ): Promise<any> {
+    let attempts = 0;
+    
+    while (attempts < maxAttempts) {
+      const tx = await this.getTransaction(txId);
+      
+      if (tx.tx_status === 'success') {
+        return tx;
+      }
+      
+      if (tx.tx_status === 'abort_by_response' || tx.tx_status === 'abort_by_post_condition') {
+        throw new APIError(`Transaction failed: ${tx.tx_result?.repr || 'Unknown error'}`, 400);
+      }
+      
+      // Wait for next block
+      await new Promise(resolve => setTimeout(resolve, intervalMs));
+      attempts++;
+    }
+    
+    throw new APIError('Transaction confirmation timeout', 408);
+  }
+
   // ============================================================================
   // Contract Endpoints
   // ============================================================================
