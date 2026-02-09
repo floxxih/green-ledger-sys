@@ -494,23 +494,9 @@ export function formatPrice(microSTX: number): string {
 }
 
 // ============================================================================
-// Legacy API (deprecated - will be removed in v2.0.0)
+// Legacy API
 // ============================================================================
-
-/**
- * @deprecated Use buildMintNFTOptions instead. This function will be removed in v2.0.0
- * @see {@link buildMintNFTOptions}
- */
-export async function mintNFT(uri: string) {
-  console.warn('DEPRECATED: mintNFT() is deprecated. Use buildMintNFTOptions() instead. This will be removed in v2.0.0');
-  return buildMintNFTOptions({ uri });
-}
-
-/**
- * @deprecated Use buildCreateCollectionOptions instead. This function will be removed in v2.0.0
- * @see {@link buildCreateCollectionOptions}
- */
-export async function createCollection(name: string, maxSupply: number) {
-  console.warn('DEPRECATED: createCollection() is deprecated. Use buildCreateCollectionOptions() instead. This will be removed in v2.0.0');
-  return buildCreateCollectionOptions({ name, maxSupply });
-}
+// Note: Legacy API functions (mintNFT, createCollection) have been removed.
+// Use buildMintNFTOptions and buildCreateCollectionOptions instead.
+// See docs/migration-guide-legacy-api.md for migration instructions.
+// ============================================================================
