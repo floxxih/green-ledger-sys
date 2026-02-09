@@ -1,0 +1,231 @@
+openapi: 3.0.3
+info:
+  title: AuroraMint API
+  description: Comprehensive API documentation for developers building on AuroraMint
+  version: 1.0.0
+  contact:
+    name: AuroraMint Support
+    email: support@auroramint.io
+servers:
+  - url: https://api.auroramint.io/v1
+    description: Production server
+  - url: https://api-staging.auroramint.io/v1
+    description: Staging server
+tags:
+  - name: NFT
+    description: NFT minting and management operations
+  - name: Marketplace
+    description: NFT marketplace operations
+  - name: Collection
+    description: NFT collection management
+  - name: Treasury
+    description: Treasury and payment operations
+paths:
+  /nft/mint:
+    post:
+      tags:
+        - NFT
+      summary: Mint a new NFT
+      description: Creates a new NFT in the specified collection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MintNFTRequest'
+      responses:
+        '200':
+          description: NFT minted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MintNFTResponse'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - bearerAuth: []
+  /nft/{tokenId}:
+    get:
+      tags:
+        - NFT
+      summary: Get NFT details
+      description: Retrieves detailed information about a specific NFT
+      parameters:
+        - name: tokenId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: NFT details retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NFTDetails'
+        '404':
+          description: NFT not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /marketplace/list:
+    post:
+      tags:
+        - Marketplace
+      summary: List NFT for sale
+      description: Lists an NFT on the marketplace at a specified price
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListNFTRequest'
+      responses:
+        '200':
+          description: NFT listed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListNFTResponse'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - bearerAuth: []
+  /marketplace/buy:
+    post:
+      tags:
+        - Marketplace
+      summary: Purchase NFT
+      description: Purchases a listed NFT from the marketplace
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BuyNFTRequest'
+      responses:
+        '200':
+          description: NFT purchased successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BuyNFTResponse'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    MintNFTRequest:
+      type: object
+      required:
+        - collectionId
+        - metadata
+      properties:
+        collectionId:
+          type: string
+          description: Collection contract identifier
+        metadata:
+          type: object
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            image:
+              type: string
+              format: uri
+            attributes:
+              type: array
+              items:
+                type: object
+    MintNFTResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        tokenId:
+          type: integer
+        txId:
+          type: string
+    NFTDetails:
+      type: object
+      properties:
+        tokenId:
+          type: integer
+        owner:
+          type: string
+        metadata:
+          type: object
+        contractId:
+          type: string
+    ListNFTRequest:
+      type: object
+      required:
+        - tokenId
+        - price
+      properties:
+        tokenId:
+          type: integer
+        price:
+          type: number
+        contractId:
+          type: string
+    ListNFTResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        listingId:
+          type: string
+        txId:
+          type: string
+    BuyNFTRequest:
+      type: object
+      required:
+        - listingId
+      properties:
+        listingId:
+          type: string
+    BuyNFTResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        tokenId:
+          type: integer
+        txId:
+          type: string
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        code:
+          type: string
+        message:
+          type: string
