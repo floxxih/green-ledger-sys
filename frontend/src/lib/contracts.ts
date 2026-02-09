@@ -494,19 +494,9 @@ export function formatPrice(microSTX: number): string {
 }
 
 // ============================================================================
-// Legacy API (for backward compatibility)
+// Legacy API
 // ============================================================================
-
-/**
- * @deprecated Use buildMintNFTOptions instead
- */
-export async function mintNFT(uri: string) {
-  return buildMintNFTOptions({ uri });
-}
-
-/**
- * @deprecated Use buildCreateCollectionOptions instead
- */
-export async function createCollection(name: string, maxSupply: number) {
-  return buildCreateCollectionOptions({ name, maxSupply });
-}
+// Note: Legacy API functions (mintNFT, createCollection) have been removed.
+// Use buildMintNFTOptions and buildCreateCollectionOptions instead.
+// See docs/migration-guide-legacy-api.md for migration instructions.
+// ============================================================================

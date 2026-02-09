@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.0] - 2024-02-09
+
+### Deprecated
+- `mintNFT()` function - Use `buildMintNFTOptions()` instead
+- `createCollection()` function - Use `buildCreateCollectionOptions()` instead
+- Legacy API will be removed in v2.0.0
+
+### Added
+- Deprecation warnings for legacy API functions
+- Migration guide for updating to new API
+- ESLint rule to detect legacy API usage
+
 ### Section 1
 Added detail about feature 1 to ensure clarity for users.
 

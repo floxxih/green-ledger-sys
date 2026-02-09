@@ -1,0 +1,17 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "no-restricted-imports": ["warn", {
+      "paths": [{
+        "name": "@/lib/contracts",
+        "importNames": ["mintNFT", "createCollection"],
+        "message": "These functions are deprecated. Use buildMintNFTOptions and buildCreateCollectionOptions instead. See docs/migration-guide-legacy-api.md"
+      }]
+    }]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
