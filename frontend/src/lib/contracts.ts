@@ -494,19 +494,23 @@ export function formatPrice(microSTX: number): string {
 }
 
 // ============================================================================
-// Legacy API (for backward compatibility)
+// Legacy API (deprecated - will be removed in v2.0.0)
 // ============================================================================
 
 /**
- * @deprecated Use buildMintNFTOptions instead
+ * @deprecated Use buildMintNFTOptions instead. This function will be removed in v2.0.0
+ * @see {@link buildMintNFTOptions}
  */
 export async function mintNFT(uri: string) {
+  console.warn('DEPRECATED: mintNFT() is deprecated. Use buildMintNFTOptions() instead. This will be removed in v2.0.0');
   return buildMintNFTOptions({ uri });
 }
 
 /**
- * @deprecated Use buildCreateCollectionOptions instead
+ * @deprecated Use buildCreateCollectionOptions instead. This function will be removed in v2.0.0
+ * @see {@link buildCreateCollectionOptions}
  */
 export async function createCollection(name: string, maxSupply: number) {
+  console.warn('DEPRECATED: createCollection() is deprecated. Use buildCreateCollectionOptions() instead. This will be removed in v2.0.0');
   return buildCreateCollectionOptions({ name, maxSupply });
 }
