@@ -5,7 +5,7 @@ interface LoginErrorsProps {
   id?: string;
 }
 
-export const LoginErrors = ({ className }: LoginErrorsProps) => {
+export default function LoginErrors = ({ className }: LoginErrorsProps) => {
   const { active } = useLoginErrors();
   
   return (
