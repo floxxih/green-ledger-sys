@@ -29,7 +29,7 @@
     "check": "clarinet check"
   },
   "devDependencies": {
-    "@hirosystems/clarinet-sdk": "^2.4.0",
+    "@hirosystems/clarinet-sdk": "^3.8.1",
     "typescript": "^5.3.3",
     "vitest": "^1.2.1"
   }
