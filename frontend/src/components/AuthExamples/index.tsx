@@ -4,5 +4,9 @@ interface AuthExamplesProps {
 }
 
 export const AuthExamples = ({ className }: AuthExamplesProps) => {
-  return <div className={className}>Auth Examples</div>;
+  return (
+    <div className={`p-4 rounded-lg ${className}`}>
+      <h2 className="text-xl font-bold">Auth Examples</h2>
+    </div>
+  );
 };
