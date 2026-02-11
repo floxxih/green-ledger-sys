@@ -5,7 +5,7 @@ interface ImageOptProps {
   id?: string;
 }
 
-export const ImageOpt = ({ className }: ImageOptProps) => {
+export default function ImageOpt = ({ className }: ImageOptProps) => {
   const { active } = useImageOpt();
   
   return (
