@@ -5,7 +5,7 @@ interface DarkModeProps {
   id?: string;
 }
 
-export const DarkMode = ({ className }: DarkModeProps) => {
+export default function DarkMode = ({ className }: DarkModeProps) => {
   const { active } = useDarkMode();
   
   return (
