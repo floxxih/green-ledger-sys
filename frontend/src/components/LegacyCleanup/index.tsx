@@ -4,5 +4,9 @@ interface LegacyCleanupProps {
 }
 
 export const LegacyCleanup = ({ className }: LegacyCleanupProps) => {
-  return <div className={className}>Legacy API Cleanup</div>;
+  return (
+    <div className={`p-4 rounded-lg ${className}`}>
+      <h2 className="text-xl font-bold">Legacy API Cleanup</h2>
+    </div>
+  );
 };
