@@ -1,1 +1,2 @@
 - Auth Examples
+- Image Optimization
