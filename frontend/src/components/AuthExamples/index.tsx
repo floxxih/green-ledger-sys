@@ -5,7 +5,7 @@ interface AuthExamplesProps {
   id?: string;
 }
 
-export const AuthExamples = ({ className }: AuthExamplesProps) => {
+export default function AuthExamples = ({ className }: AuthExamplesProps) => {
   const { active } = useAuthExamples();
   
   return (
