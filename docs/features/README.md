@@ -1,1 +1,3 @@
 - Legacy API Cleanup
+- Auth Examples
+- Image Optimization

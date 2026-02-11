@@ -13,6 +13,12 @@ Complete API documentation for developers building on AuroraMint.
 5. **[API Playground Setup](./playground-setup.md)** - Set up interactive API testing
 6. **[OpenAPI Specification](./openapi.yaml)** - Machine-readable API spec
 
+### Authentication
+
+7. **[Authentication Guide](./authentication-guide.md)** - Complete JWT authentication guide
+8. **[Authentication Examples](./authentication-examples.md)** - cURL, JavaScript, Python examples
+9. **[Postman Collection](./postman-collection.md)** - API testing collection
+
 ## 🚀 Quick Start
 
 ### For Smart Contract Developers
