@@ -5,7 +5,7 @@ interface MobileFixProps {
   id?: string;
 }
 
-export const MobileFix = ({ className }: MobileFixProps) => {
+export default function MobileFix = ({ className }: MobileFixProps) => {
   const { active } = useMobileFix();
   
   return (
