@@ -5,7 +5,7 @@ interface LegacyCleanupProps {
   id?: string;
 }
 
-export const LegacyCleanup = ({ className }: LegacyCleanupProps) => {
+export default function LegacyCleanup = ({ className }: LegacyCleanupProps) => {
   const { active } = useLegacyCleanup();
   
   return (
