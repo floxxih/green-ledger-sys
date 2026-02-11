@@ -5,7 +5,7 @@ interface ApiDocsRevampProps {
   id?: string;
 }
 
-export const ApiDocsRevamp = ({ className }: ApiDocsRevampProps) => {
+export default function ApiDocsRevamp = ({ className }: ApiDocsRevampProps) => {
   const { active } = useApiDocsRevamp();
   
   return (
