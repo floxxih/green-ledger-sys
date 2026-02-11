@@ -4,5 +4,9 @@ interface MobileFixProps {
 }
 
 export const MobileFix = ({ className }: MobileFixProps) => {
-  return <div className={className}>Mobile Layout Fix</div>;
+  return (
+    <div className={`p-4 rounded-lg ${className}`}>
+      <h2 className="text-xl font-bold">Mobile Layout Fix</h2>
+    </div>
+  );
 };
