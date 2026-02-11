@@ -1,1 +1,4 @@
 - Enhanced Login Errors
+- Legacy API Cleanup
+- Auth Examples
+- Image Optimization
