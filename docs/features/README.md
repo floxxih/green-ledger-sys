@@ -1,3 +1,4 @@
+- Dark Mode Toggle
 - Mobile Layout Fix
 - API Docs Revamp
 - Enhanced Login Errors

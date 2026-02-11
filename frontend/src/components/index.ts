@@ -1,3 +1,4 @@
+export * from './DarkMode';
 export * from './MobileFix';
 export * from './ApiDocsRevamp';
 export * from './LoginErrors';
