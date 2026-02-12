@@ -1144,3 +1144,4 @@
 /* Prevent horizontal scroll on mobile */
 html, body { overflow-x: hidden; max-width: 100vw; }
 @media (max-width: 375px) { .text-base { font-size: 0.9375rem; } }
+@media (max-width: 375px) { .grid { grid-template-columns: 1fr !important; } }
