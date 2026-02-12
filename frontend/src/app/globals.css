@@ -199,6 +199,10 @@
     @apply bg-purple-500/30 text-white;
   }
   
+  .light ::selection {
+    @apply bg-purple-500/20 text-gray-900;
+  }
+  
   /* Scrollbar Styles */
   ::-webkit-scrollbar {
     width: 8px;
