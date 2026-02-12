@@ -45,7 +45,7 @@
   --color-error: 239 68 68;
   --color-info: 59 130 246;
   
-  /* Background Colors */
+  /* Dark Mode - Background Colors */
   --bg-primary: 3 7 18;
   --bg-secondary: 17 24 39;
   --bg-tertiary: 31 41 55;
@@ -55,7 +55,7 @@
   --surface-glass: 255 255 255;
   --surface-glass-opacity: 0.05;
   
-  /* Border Colors */
+  /* Dark Mode - Border Colors */
   --border-default: 55 65 81;
   --border-subtle: 31 41 55;
   --border-emphasis: 107 114 128;
@@ -139,6 +139,24 @@
   --z-popover: 60;
   --z-tooltip: 70;
   --z-toast: 80;
+}
+
+/* Light Mode Theme Variables */
+:root.light {
+  /* Light Mode - Background Colors */
+  --bg-primary: 255 255 255;
+  --bg-secondary: 249 250 251;
+  --bg-tertiary: 243 244 246;
+  --bg-elevated: 255 255 255;
+  
+  /* Light Mode - Border Colors */
+  --border-default: 229 231 235;
+  --border-subtle: 243 244 246;
+  --border-emphasis: 209 213 219;
+  
+  /* Light Mode - Surface Colors */
+  --surface-glass: 0 0 0;
+  --surface-glass-opacity: 0.03;
 }
 
 /* ============================================================================
