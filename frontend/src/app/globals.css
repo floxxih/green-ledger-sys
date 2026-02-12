@@ -316,6 +316,10 @@
     @apply bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50;
   }
   
+  .light .card {
+    @apply bg-white border-gray-200;
+  }
+  
   .card-interactive {
     @apply card transition-all duration-300;
     @apply hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1;
