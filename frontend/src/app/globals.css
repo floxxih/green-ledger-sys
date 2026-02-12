@@ -266,8 +266,16 @@
     @apply text-sm bg-gray-800 px-1.5 py-0.5 rounded;
   }
   
+  .light code {
+    @apply bg-gray-200 text-gray-900;
+  }
+  
   pre {
     @apply bg-gray-900 p-4 rounded-xl overflow-x-auto;
+  }
+  
+  .light pre {
+    @apply bg-gray-100;
   }
 }
 
