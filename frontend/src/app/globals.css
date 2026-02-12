@@ -1141,3 +1141,5 @@
 .activity-item:hover {
   @apply bg-white/5 -mx-2 px-2 rounded-lg;
 }
+/* Prevent horizontal scroll on mobile */
+html, body { overflow-x: hidden; max-width: 100vw; }
