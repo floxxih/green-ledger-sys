@@ -185,6 +185,10 @@
     min-height: 100dvh;
   }
   
+  .light body {
+    @apply bg-white text-gray-900;
+  }
+  
   /* Focus Visible Styles */
   :focus-visible {
     @apply outline-none ring-2 ring-purple-500 ring-offset-2 ring-offset-gray-900;
