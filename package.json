@@ -1,7 +1,7 @@
 {
   "name": "aurora-mint",
-  "version": "3.0.0",
-  "description": "Decentralized NFT marketplace and auction platform on Stacks",
+  "version": "3.1.0",
+  "description": "Decentralized NFT marketplace and auction platform on Stacks with dark mode support",
   "author": "AuroraMint Team",
   "license": "MIT",
   "homepage": "https://auroramint.io",
