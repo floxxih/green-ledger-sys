@@ -261,8 +261,16 @@
     @apply bg-white/5 backdrop-blur-xl border border-white/10;
   }
   
+  .light .glass {
+    @apply bg-black/5 border-black/10;
+  }
+  
   .glass-dark {
     @apply bg-black/20 backdrop-blur-xl border border-white/5;
+  }
+  
+  .light .glass-dark {
+    @apply bg-white/80 border-gray-200;
   }
   
   /* Gradient Text */
