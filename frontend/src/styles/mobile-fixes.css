@@ -1,0 +1,46 @@
+/* ============================================================================
+   Mobile-Specific Fixes for iPhone SE and small devices
+   ============================================================================ */
+
+@media screen and (max-width: 375px) {
+  /* Reduce horizontal padding on small screens */
+  .container {
+    @apply px-3;
+  }
+  
+  /* Smaller text on tiny screens */
+  h1 {
+    @apply text-3xl;
+  }
+  
+  h2 {
+    @apply text-2xl;
+  }
+  
+  /* Adjust button sizes */
+  .btn {
+    @apply text-sm px-3 py-2;
+  }
+  
+  /* Make cards more compact */
+  .card {
+    @apply p-3;
+  }
+  
+  /* Reduce gap in flex/grid layouts */
+  .gap-4 {
+    @apply gap-2;
+  }
+  
+  .gap-6 {
+    @apply gap-3;
+  }
+}
+
+/* iPhone SE specific landscape fixes */
+@media screen and (max-width: 667px) and (orientation: landscape) {
+  .min-h-screen {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
