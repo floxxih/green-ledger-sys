@@ -1,0 +1,1 @@
+# Mobile Layout Fix for iPhone SE\n\nThis update fixes layout issues on iPhone SE and similar small screen devices.\n\n## Changes\n- Added safe area inset utilities\n- Prevented horizontal scroll\n- Optimized font sizes and spacing\n- Added responsive utilities\n- Fixed touch targets\n- Improved iOS compatibility
