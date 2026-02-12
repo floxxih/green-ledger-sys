@@ -11,6 +11,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useWallet } from '@/hooks/useWallet';
+import ThemeToggle from './ThemeToggle';
 
 // Scroll detection threshold
 const SCROLL_THRESHOLD = 20;
@@ -331,6 +332,9 @@ export default function Header() {
                 </div>
               )}
             </div>
+
+            {/* Theme Toggle */}
+            <ThemeToggle variant="icon" size="md" />
 
             {/* Wallet Connection */}
           <div ref={walletMenuRef}>

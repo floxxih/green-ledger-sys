@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import { WalletProvider } from '@/context/WalletContext';
 import { ToastProvider } from '@/context/ToastContext';
+import { ThemeProvider } from '@/components/ThemeToggle';
 
 /**
  * Root Layout
@@ -222,17 +223,19 @@ export default function RootLayout({
       >
         <NetworkStatus />
         <SkipLink />
-        <WalletProvider>
-          <ToastProvider>
-            <div id="main-content" className="flex flex-col min-h-screen">
-              {children}
-            </div>
-            {/* Portal target for modals */}
-            <div id="modal-root" />
-            {/* Portal target for tooltips */}
-            <div id="tooltip-root" />
-          </ToastProvider>
-        </WalletProvider>
+        <ThemeProvider>
+          <WalletProvider>
+            <ToastProvider>
+              <div id="main-content" className="flex flex-col min-h-screen">
+                {children}
+              </div>
+              {/* Portal target for modals */}
+              <div id="modal-root" />
+              {/* Portal target for tooltips */}
+              <div id="tooltip-root" />
+            </ToastProvider>
+          </WalletProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

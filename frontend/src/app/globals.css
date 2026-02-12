@@ -45,7 +45,7 @@
   --color-error: 239 68 68;
   --color-info: 59 130 246;
   
-  /* Background Colors */
+  /* Dark Mode - Background Colors */
   --bg-primary: 3 7 18;
   --bg-secondary: 17 24 39;
   --bg-tertiary: 31 41 55;
@@ -55,7 +55,7 @@
   --surface-glass: 255 255 255;
   --surface-glass-opacity: 0.05;
   
-  /* Border Colors */
+  /* Dark Mode - Border Colors */
   --border-default: 55 65 81;
   --border-subtle: 31 41 55;
   --border-emphasis: 107 114 128;
@@ -141,6 +141,24 @@
   --z-toast: 80;
 }
 
+/* Light Mode Theme Variables */
+:root.light {
+  /* Light Mode - Background Colors */
+  --bg-primary: 255 255 255;
+  --bg-secondary: 249 250 251;
+  --bg-tertiary: 243 244 246;
+  --bg-elevated: 255 255 255;
+  
+  /* Light Mode - Border Colors */
+  --border-default: 229 231 235;
+  --border-subtle: 243 244 246;
+  --border-emphasis: 209 213 219;
+  
+  /* Light Mode - Surface Colors */
+  --surface-glass: 0 0 0;
+  --surface-glass-opacity: 0.03;
+}
+
 /* ============================================================================
    Base Styles
    ============================================================================ */
@@ -167,14 +185,26 @@
     min-height: 100dvh;
   }
   
+  .light body {
+    @apply bg-white text-gray-900;
+  }
+  
   /* Focus Visible Styles */
   :focus-visible {
     @apply outline-none ring-2 ring-purple-500 ring-offset-2 ring-offset-gray-900;
   }
   
+  .light :focus-visible {
+    @apply ring-offset-white;
+  }
+  
   /* Selection Styles */
   ::selection {
     @apply bg-purple-500/30 text-white;
+  }
+  
+  .light ::selection {
+    @apply bg-purple-500/20 text-gray-900;
   }
   
   /* Scrollbar Styles */
@@ -187,14 +217,26 @@
     @apply bg-gray-900;
   }
   
+  .light ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  
   ::-webkit-scrollbar-thumb {
     @apply bg-gray-700 rounded-full;
     border: 2px solid transparent;
     background-clip: content-box;
   }
   
+  .light ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400;
+  }
+  
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-600;
+  }
+  
+  .light ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
   }
   
   /* Typography */
@@ -224,8 +266,16 @@
     @apply text-sm bg-gray-800 px-1.5 py-0.5 rounded;
   }
   
+  .light code {
+    @apply bg-gray-200 text-gray-900;
+  }
+  
   pre {
     @apply bg-gray-900 p-4 rounded-xl overflow-x-auto;
+  }
+  
+  .light pre {
+    @apply bg-gray-100;
   }
 }
 
@@ -239,8 +289,16 @@
     @apply bg-white/5 backdrop-blur-xl border border-white/10;
   }
   
+  .light .glass {
+    @apply bg-black/5 border-black/10;
+  }
+  
   .glass-dark {
     @apply bg-black/20 backdrop-blur-xl border border-white/5;
+  }
+  
+  .light .glass-dark {
+    @apply bg-white/80 border-gray-200;
   }
   
   /* Gradient Text */
@@ -294,6 +352,10 @@
     @apply bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50;
   }
   
+  .light .card {
+    @apply bg-white border-gray-200;
+  }
+  
   .card-interactive {
     @apply card transition-all duration-300;
     @apply hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1;
@@ -337,6 +399,11 @@
     @apply border border-gray-700 hover:border-gray-600;
   }
   
+  .light .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-900;
+    @apply border-gray-300 hover:border-gray-400;
+  }
+  
   .btn-ghost {
     @apply btn bg-transparent hover:bg-white/10 text-gray-300 hover:text-white;
   }
@@ -354,6 +421,11 @@
     @apply hover:border-gray-600;
     @apply focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
     @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .light .input {
+    @apply bg-white border-gray-300 text-gray-900 placeholder-gray-400;
+    @apply hover:border-gray-400;
   }
   
   .input-error {
