@@ -1147,3 +1147,4 @@ html, body { overflow-x: hidden; max-width: 100vw; }
 @media (max-width: 375px) { .grid { grid-template-columns: 1fr !important; } }
 .mobile-hidden { display: none; } @media (min-width: 768px) { .mobile-hidden { display: block; } }
 .desktop-hidden { display: block; } @media (min-width: 768px) { .desktop-hidden { display: none; } }
+@media (max-width: 375px) { .modal { width: 100%; margin: 0; border-radius: 0; } }
