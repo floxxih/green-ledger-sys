@@ -25,7 +25,7 @@
   "dependencies": {
     "@stacks/auth": "^6.16.1",
     "@stacks/common": "^6.16.0",
-    "@stacks/connect": "^7.9.0",
+    "@stacks/connect": "^8.2.4",
     "@stacks/encryption": "^6.16.0",
     "@stacks/network": "^7.3.1",
     "@stacks/profile": "^6.16.0",
