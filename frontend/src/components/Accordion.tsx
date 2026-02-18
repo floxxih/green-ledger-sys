@@ -7,12 +7,13 @@
  * @version 1.0.0
  */
 
-import { useState, useRef, useEffect, memo, ReactNode, createContext, useContext } from 'react';
+import { useState, useRef, useEffect, memo, ReactNode, createContext, useContext, useCallback } from 'react';
 
 // Accordion Context for managing single/multiple open items
 interface AccordionContextValue {
   openItems: string[];
   toggleItem: (id: string) => void;
+  registerItem: (id: string, ref: HTMLButtonElement) => void;
 }
 
 const AccordionContext = createContext<AccordionContextValue | null>(null);
@@ -32,6 +33,7 @@ export function Accordion({
   className = '',
 }: AccordionProps) {
   const [openItems, setOpenItems] = useState<string[]>(defaultOpen);
+  const itemRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
 
   const toggleItem = (id: string) => {
     setOpenItems((prev) => {
@@ -45,8 +47,12 @@ export function Accordion({
     });
   };
 
+  const registerItem = useCallback((id: string, ref: HTMLButtonElement) => {
+    itemRefs.current.set(id, ref);
+  }, []);
+
   return (
-    <AccordionContext.Provider value={{ openItems, toggleItem }}>
+    <AccordionContext.Provider value={{ openItems, toggleItem, registerItem }}>
       <div className={`space-y-2 ${className}`}>
         {children}
       </div>
@@ -76,14 +82,22 @@ function AccordionItemComponent({
 }: AccordionItemProps) {
   const context = useContext(AccordionContext);
   const contentRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const [contentHeight, setContentHeight] = useState(0);
 
   if (!context) {
     throw new Error('AccordionItem must be used within an Accordion');
   }
 
-  const { openItems, toggleItem } = context;
+  const { openItems, toggleItem, registerItem } = context;
   const isOpen = openItems.includes(id);
+
+  // Register button ref for keyboard navigation
+  useEffect(() => {
+    if (buttonRef.current) {
+      registerItem(id, buttonRef.current);
+    }
+  }, [id, registerItem]);
 
   // Update content height when open state changes
   useEffect(() => {
@@ -91,6 +105,48 @@ function AccordionItemComponent({
       setContentHeight(isOpen ? contentRef.current.scrollHeight : 0);
     }
   }, [isOpen, children]);
+
+  // Handle keyboard navigation between accordion items
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (disabled) return;
+
+    const buttons = Array.from(document.querySelectorAll('[role="button"][data-accordion-item="true"]'));
+    const currentIndex = buttons.indexOf(e.currentTarget);
+
+    switch (e.key) {
+      case 'ArrowDown':
+      case 'ArrowRight':
+        e.preventDefault();
+        if (currentIndex < buttons.length - 1) {
+          (buttons[currentIndex + 1] as HTMLButtonElement).focus();
+        }
+        break;
+      case 'ArrowUp':
+      case 'ArrowLeft':
+        e.preventDefault();
+        if (currentIndex > 0) {
+          (buttons[currentIndex - 1] as HTMLButtonElement).focus();
+        }
+        break;
+      case 'Home':
+        e.preventDefault();
+        if (buttons.length > 0) {
+          (buttons[0] as HTMLButtonElement).focus();
+        }
+        break;
+      case 'End':
+        e.preventDefault();
+        if (buttons.length > 0) {
+          (buttons[buttons.length - 1] as HTMLButtonElement).focus();
+        }
+        break;
+      case ' ':
+      case 'Enter':
+        e.preventDefault();
+        toggleItem(id);
+        break;
+    }
+  };
 
   return (
     <div
@@ -103,16 +159,22 @@ function AccordionItemComponent({
     >
       {/* Header */}
       <button
+        ref={buttonRef}
         type="button"
         onClick={() => !disabled && toggleItem(id)}
+        onKeyDown={handleKeyDown}
         disabled={disabled}
         className={`
           w-full flex items-center justify-between gap-3 p-4 text-left
-          transition-colors
+          transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset
           ${disabled ? 'cursor-not-allowed' : 'cursor-pointer hover:bg-gray-800/50'}
         `}
         aria-expanded={isOpen}
         aria-controls={`accordion-content-${id}`}
+        aria-disabled={disabled}
+        data-accordion-item="true"
+        role="button"
+        tabIndex={disabled ? -1 : 0}
       >
         <div className="flex items-center gap-3 min-w-0">
           {icon && <span className="text-gray-400 flex-shrink-0">{icon}</span>}
@@ -133,6 +195,7 @@ function AccordionItemComponent({
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
@@ -142,6 +205,7 @@ function AccordionItemComponent({
       <div
         id={`accordion-content-${id}`}
         role="region"
+        aria-labelledby={`accordion-header-${id}`}
         aria-hidden={!isOpen}
         style={{ height: contentHeight }}
         className="overflow-hidden transition-all duration-300 ease-out"
@@ -215,7 +279,7 @@ export function Collapsible({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between gap-3 p-4 text-left hover:bg-gray-800/50 transition-colors"
+        className="w-full flex items-center justify-between gap-3 p-4 text-left hover:bg-gray-800/50 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
         aria-expanded={isOpen}
       >
         <div className="flex items-center gap-3">
@@ -227,6 +291,7 @@ export function Collapsible({
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
