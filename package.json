@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@hirosystems/clarinet-sdk": "^3.8.1",
-    "typescript": "^5.3.3",
+    "typescript": "^6.0.3",
     "vitest": "^4.0.18"
   }
 }
